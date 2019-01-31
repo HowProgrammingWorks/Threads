@@ -1,2 +1,1 @@
-# Threads
-Multithreading: WorkerThreads, Workers, SheredWorkers
+# Multithreading: WorkerThreads, Workers, SheredWorkers
