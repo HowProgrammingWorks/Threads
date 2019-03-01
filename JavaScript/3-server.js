@@ -11,7 +11,7 @@ worker.on('message', msg => {
   }
 });
 
-process.on('SIGTERM', () => {
+process.on('SIGINT', () => {
   worker.terminate(() => {
     console.log('HTTP Server Stopped');
   });
