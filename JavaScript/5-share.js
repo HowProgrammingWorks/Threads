@@ -11,7 +11,7 @@ setInterval(() => {
   console.dir(buffer);
 }, 100);
 
-process.on('SIGTERM', () => {
+process.on('SIGINT', () => {
   worker.terminate(() => {
     console.log('Bye');
   });
