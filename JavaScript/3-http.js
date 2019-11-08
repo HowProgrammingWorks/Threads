@@ -8,12 +8,8 @@ const port = 8000;
 threads.parentPort.postMessage({ name: 'started', port });
 
 const routing = {
-  '/': async (req, res) => {
-    return { status: res.statusCode };
-  },
-  '/api/method': async (req, res) => {
-    return { status: res.statusCode };
-  },
+  '/': async (req, res) => ({ status: res.statusCode }),
+  '/api/method': async (req, res) => ({ status: res.statusCode }),
 };
 
 const types = {
