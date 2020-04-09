@@ -11,8 +11,7 @@ worker.on('message', msg => {
   }
 });
 
-process.on('SIGINT', () => {
-  worker.terminate(() => {
-    console.log('HTTP Server Stopped');
-  });
+process.on('SIGINT', async () => {
+  await worker.terminate();
+  console.log('HTTP Server Stopped');
 });

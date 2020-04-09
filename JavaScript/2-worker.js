@@ -8,4 +8,4 @@ threads.parentPort.on('message', data => {
   console.dir({ data });
 });
 
-//process.exit(0);
+process.exit(0);

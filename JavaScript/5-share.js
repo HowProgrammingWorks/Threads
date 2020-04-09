@@ -11,8 +11,8 @@ setInterval(() => {
   console.dir(buffer);
 }, 100);
 
-process.on('SIGINT', () => {
-  worker.terminate(() => {
-    console.log('Bye');
-  });
+process.on('SIGINT', async () => {
+  await worker.terminate();
+  console.log('Bye');
+  process.exit(0);
 });

@@ -13,9 +13,3 @@ worker.on('message', msg => {
     console.dir({ value: array[0] });
   }
 });
-
-process.on('SIGINT', () => {
-  worker.terminate(() => {
-    console.log('Bye');
-  });
-});

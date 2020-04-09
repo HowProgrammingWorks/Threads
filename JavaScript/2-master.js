@@ -18,8 +18,7 @@ worker.on('exit', code => {
   console.dir({ code });
 });
 
-setTimeout(() => {
-  worker.terminate((err, code) => {
-    console.dir({ err, code });
-  });
+setTimeout(async () => {
+  await worker.terminate();
+  console.log('Terminated');
 }, 1000);
