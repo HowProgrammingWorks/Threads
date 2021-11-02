@@ -4,18 +4,18 @@
     "es6": true,
     "node": true
   },
-  "globals": {
-    "SharedArrayBuffer": true
-  },
   "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaVersion": 2020
+  },
+  "globals": {
+    "BigInt": true,
+    "SharedArrayBuffer": true
   },
   "rules": {
     "indent": [
       "error",
-      2,
-      { "SwitchCase": 1 }
+      2
     ],
     "linebreak-style": [
       "error",
@@ -29,7 +29,6 @@
       "error",
       "always"
     ],
-    "no-console": "off",
     "no-loop-func": [
       "error"
     ],
@@ -115,6 +114,9 @@
       }
     ],
     "new-parens": [
+      "error"
+    ],
+    "no-lonely-if": [
       "error"
     ],
     "no-trailing-spaces": [
@@ -212,7 +214,7 @@
     ],
     "arrow-parens": [
       "error",
-      "as-needed"
+      "always"
     ],
     "arrow-body-style": [
       "error",
