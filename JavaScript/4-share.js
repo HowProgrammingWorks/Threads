@@ -8,7 +8,7 @@ const array = new Int8Array(buffer);
 
 const worker = new Worker('./4-access.js', { workerData: { buffer } });
 
-worker.on('message', msg => {
+worker.on('message', (msg) => {
   if (msg.name === 'display') {
     console.dir({ value: array[0] });
   }

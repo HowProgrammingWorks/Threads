@@ -11,10 +11,10 @@ worker.postMessage('Message from Master to Worker');
 worker.on('message', (...args) => {
   console.log({ args });
 });
-worker.on('error', err => {
+worker.on('error', (err) => {
   console.log(err.stack);
 });
-worker.on('exit', code => {
+worker.on('exit', (code) => {
   console.dir({ code });
 });
 
