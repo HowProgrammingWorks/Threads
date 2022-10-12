@@ -1,6 +1,6 @@
 'use strict';
 
-const threads = require('worker_threads');
+const threads = require('node:worker_threads');
 
 console.dir({ worker: threads });
 threads.parentPort.postMessage('Message from Worker to Master');

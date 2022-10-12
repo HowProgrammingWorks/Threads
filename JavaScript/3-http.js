@@ -1,7 +1,7 @@
 'use strict';
 
-const threads = require('worker_threads');
-const http = require('http');
+const threads = require('node:worker_threads');
+const http = require('node:http');
 
 const port = 8000;
 

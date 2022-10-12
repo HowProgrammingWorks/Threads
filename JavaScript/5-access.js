@@ -1,6 +1,6 @@
 'use strict';
 
-const threads = require('worker_threads');
+const threads = require('node:worker_threads');
 
 const { buffer } = threads.workerData;
 const array = new Int8Array(buffer);
