@@ -19,15 +19,17 @@ const types = {
   undefined: () => 'not found',
 };
 
-http.createServer(async (req, res) => {
-  const handler = routing[req.url];
-  if (!handler) {
-    res.end('Handler not found');
-    return;
-  }
-  const data = await handler(req, res);
-  const type = typeof data;
-  const serializer = types[type];
-  const result = serializer(data);
-  res.end(result);
-}).listen(port);
+http
+  .createServer(async (req, res) => {
+    const handler = routing[req.url];
+    if (!handler) {
+      res.end('Handler not found');
+      return;
+    }
+    const data = await handler(req, res);
+    const type = typeof data;
+    const serializer = types[type];
+    const result = serializer(data);
+    res.end(result);
+  })
+  .listen(port);
